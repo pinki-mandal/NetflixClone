@@ -23,12 +23,12 @@ app.use(cors(corsOption))
 // Mounting userRoutes under the path '/api/v1/user'
 app.use("/api/v1/user", userRoutes);
 
-// app.get("/", (req, res) => {
-//     res.status(200).json({
-//         message: "hello pinki mandal",
-//         success: true
-//     });
-// });
+app.get("/", (req, res) => {
+    res.status(200).json({
+        message: "hello pinki mandal",
+        success: true
+    });
+});
 
 app.listen(PORT, () => {
     console.log(`server is running on port ${PORT}`);
