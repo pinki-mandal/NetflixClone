@@ -24,9 +24,9 @@ app.use(cors(corsOption))
 app.use("/api/v1/user", userRoutes);
 
 app.get("/", (req, res) => {
-    res.status(200).json({
-        message: "hello pinki mandal",
-        success: true
+    res.send({
+        activeStatus:true,
+        error:false,
     });
 });
 
